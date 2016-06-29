@@ -1,0 +1,10 @@
+def a(ht,fromP, toP, withP): 
+    if ht >= 1:                                                        
+        a(ht-1, fromP, withP, toP)                      
+        b(fromP, toP, ht)
+        a(ht-1, withP, toP, fromP)          
+                                                             
+def b(fp, tp, ht):                                
+    print "moving ", "~" * ht, "from", fp, "to", tp     
+  
+a(3,"A","B","C")
